@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  title: "EuroFab research project"
+  sidebar:
+    tools:
+    - icon: github
+      href: https://github.com/eurofab-project
+    contents:
+    - section: "About"
+      contents:
+      - index.qmd
+      - text: Talks
+        href:  https://eurofab-project.github.io/talks/
+    - section: "Work streams"
+      contents:
+      - text: Urban morphometrics
+        href:  https://eurofab-project.github.io/morphometrics/
+      - text: Earth observation
+        href:  https://eurofab-project.github.io/eo/
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    mainfont: "Open Sans"
+    include-in-header: assets/font.html
+
+
+
+
