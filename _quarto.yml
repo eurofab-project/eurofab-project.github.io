@@ -11,6 +11,8 @@ website:
     - section: "About"
       contents:
       - index.qmd
+      - text: Technical Notes
+        href:  https://eurofab-project.github.io/technical-notes/
       - text: Talks
         href:  https://eurofab-project.github.io/talks/
     - section: "Work streams"
