@@ -1,0 +1,97 @@
+---
+title: "Data product"
+---
+
+The EO workstream generated a data cube of the model outputs across Great Britain. The final data cube including predictions for the years 2016 to 2021 for 7 and 12 classes and is stored as a Zarr file (version 3) available from the link below.
+
+```sh
+https://s3.cl4.du.cesnet.cz/4f4743b6_4043_4e02_a3ba_0452aa7523a2:uscuni-public/eurofab/eurofab_predictions_datacube.zarr
+```
+
+The metadata YAML file describing the structure:
+
+```yaml
+name: urban_fabric_prediction
+description: Urban fabric prediction from EO data
+
+
+metadata:
+  product_type: urban_fabric_map
+
+  class_labels:
+    k7:
+      '0': Countryside agriculture
+      '1': Open sprawl
+      '2': Compact suburbia
+      '3': Urban
+      '4': Urban buffer
+      '5': Warehouse/Park land
+      '6': Wild countryside
+    k12:
+      '0': Accessible suburbia
+      '1': Connected residential neighbourhoods
+      '2': Countryside agriculture
+      '3': Dense residential neighbourhoods
+      '4': Dense urban neighbourhoods
+      '5': Disconnected suburbia
+      '6': Gridded residential quarters
+      '7': Open sprawl
+      '8': Urban buffer
+      '9': Urbanity
+      '10': Warehouse/Park land
+      '11': Wild countryside
+
+  cluster_numbers: [7, 12]
+  time_range:
+    start: 2016
+    end: 2021
+
+measurements:
+  - name: prediction
+    dtype: int32
+    nodata: -1
+    units: "1"
+    aliases: [cluster]
+  - name: probabilities
+    dtype: float32
+    nodata: -9999
+    units: "1"
+    aliases: [class_probs]
+
+storage:
+  crs: EPSG:4326
+```
+
+## Example code
+
+The data can be read with `xarray` and similar tools.
+
+```py
+import os
+
+import xarray as xr
+
+os.environ["ZARR_V3_EXPERIMENTAL_API"] = "1"
+
+path = "https://s3.cl4.du.cesnet.cz/4f4743b6_4043_4e02_a3ba_0452aa7523a2:uscuni-public/eurofab/eurofab_predictions_datacube.zarr"
+ds = xr.open_zarr(path, zarr_format=3)
+ds
+```
+
+```
+<xarray.Dataset> Size: 4GB
+Dimensions:        (k: 2, obs: 3634816, year: 6, class: 12)
+Coordinates:
+  * k              (k) int64 16B 7 12
+    lon            (obs) float64 29MB dask.array<chunksize=(2000,), meta=np.ndarray>
+  * obs            (obs) int64 29MB 0 1 2 3 ... 3634812 3634813 3634814 3634815
+    lat            (obs) float64 29MB dask.array<chunksize=(2000,), meta=np.ndarray>
+    geometry       (obs) object 29MB dask.array<chunksize=(3634816,), meta=np.ndarray>
+  * year           (year) int64 48B 2016 2017 2018 2019 2020 2021
+Dimensions without coordinates: class
+Data variables:
+    prediction     (obs, year, k) int32 174MB dask.array<chunksize=(2000, 1, 1), meta=np.ndarray>
+    probabilities  (obs, class, year, k) float64 4GB dask.array<chunksize=(2000, 12, 1, 1), meta=np.ndarray>
+```
+
+The dataset is chunked and can be read only partially, if needed. For details on the contents, see the relevant [Technical notes](https://eurofab-project.github.io/technical-notes/).
