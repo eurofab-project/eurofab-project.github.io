@@ -74,6 +74,8 @@ storage:
   crs: EPSG:4326
 ```
 
+The dataset is chunked and can be read only partially, if needed.
+
 ## Example code
 
 ### Basic data cube
@@ -108,8 +110,6 @@ Data variables:
     probabilities  (obs, class, year, k) float64 4GB dask.array<chunksize=(2000, 12, 1, 1), meta=np.ndarray>
 ```
 
-The dataset is chunked and can be read only partially, if needed.
-
 ### Vector data cube
 
 Vector data cube is encoded using CF conventions. The example code using `xarray` and `xvec`:
@@ -129,21 +129,19 @@ ds
 
 ```
 <xarray.Dataset> Size: 4GB
-Dimensions:        (k: 2, geometry: 3634816, year: 6, class: 12)
+Dimensions:        (geometry: 3634816, class: 12, year: 6, k: 2)
 Coordinates:
-  * k              (k) int64 16B 7 12
   * geometry       (geometry) object 29MB POLYGON ((6220 901450, 6220 901700,...
+  * k              (k) int64 16B 7 12
   * year           (year) int64 48B 2016 2017 2018 2019 2020 2021
 Dimensions without coordinates: class
 Data variables:
-    prediction     (geometry, year, k) int32 174MB 0 8 0 2 0 2 4 ... 1 3 3 3 3 3
-    probabilities  (geometry, class, year, k) float64 4GB 0.2516 ... 0.003048
+    probabilities  (geometry, class, year, k) float64 4GB dask.array<chunksize=(2000, 12, 1, 1), meta=np.ndarray>
+    prediction     (geometry, year, k) int32 174MB dask.array<chunksize=(2000, 1, 1), meta=np.ndarray>
 Indexes:
     geometry  GeometryIndex (crs=EPSG:27700)
 ```
 
 See the [documentation of Xvec](https://xvec.readthedocs.io/en/stable/index.html) for more details on vector data cubes.
-
-Note that the vector data cube is not chunked.
 
 For details on the contents, see the relevant [Technical notes](https://eurofab-project.github.io/technical-notes/).
