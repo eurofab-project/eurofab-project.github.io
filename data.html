@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EuroFab research project</title>
+<title>Data product – EuroFab research project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li><li class="breadcrumb-item"><a href="./index.html">EuroFab research project</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li><li class="breadcrumb-item"><a href="./data.html">Data product</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">EuroFab research project</span></a>
   </div>
 </li>
@@ -141,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link">
+  <a href="./data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data product</span></a>
   </div>
 </li>
@@ -175,15 +210,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#example-code" id="toc-example-code" class="nav-link active" data-scroll-target="#example-code">Example code</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li><li class="breadcrumb-item"><a href="./index.html">EuroFab research project</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li><li class="breadcrumb-item"><a href="./data.html">Data product</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">EuroFab research project</h1>
+<h1 class="title">Data product</h1>
 </div>
 
 
@@ -200,17 +241,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The <em>“EuroFab: European Urban Fabric Classification using Artificial Intelligence”</em> project brings an innovative perspective to understanding the <strong>structure of human settlements</strong> by capturing their physical composition using explainable data science in combination with Earth Observation (EO), and through state-of-the-art AI, uncovering their temporal dimension.</p>
-<p>Specifically, the solutions develop a two-step system combining <strong>mathematical characterisation of built-up fabric</strong> using techniques known as urban morphometrics, providing a rich hierarchical classification backed by rich interpretable numerical descriptions, and state-of-the-art <strong>neural networks</strong> to recognise such classification from open optical satellite imagery (<strong>Sentinel 2</strong>), allowing both the detection of individual types in areas with ground data of lesser quality and the unfolding of such classification over time, providing a unique temporal look at how human settlements evolve.</p>
-<p>The output paves the way to map urban development in the European continent over both space and time, covering every building from the smallest hamlet to the largest metropolis.</p>
-<p>EuroFab helps us understand the habitats we built and efficiently affect policy at European, national and local levels ensuring the future of “urban” is sustainable, resilient and data driven.</p>
-<p>The proposed project is an initiation of a more ambitious undertaking. It focuses on developing scientific and technical solutions based on novel AI methods, in conjunction with strategically shaping the outputs and framework to serve various stakeholders directly involved in policy, planning, and research.</p>
-<p>For more details, please refer to individual <a href="https://eurofab-project.github.io/technical-notes/">Technical Notes</a>.</p>
-<p><img src="assets/logos.png" class="img-fluid"></p>
-<p><em>The activities reported in this document were carried under a programme of, and funded by, the European Space Agency. View expressed in the publication can in no way be taken to reflect the official opinion of the European Space Agency.</em></p>
-<p><img src="assets/esa.jpg" class="img-fluid" width="300"></p>
+<p>The EO workstream generated a data cube of the model outputs across Great Britain. The final data cube including predictions for the years 2016 to 2021 for 7 and 12 classes and is stored as a Zarr file (version 3) available from the link below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://s3.cl4.du.cesnet.cz/4f4743b6_4043_4e02_a3ba_0452aa7523a2:uscuni-public/eurofab/eurofab_predictions_datacube.zarr</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The metadata YAML file describing the structure:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> urban_fabric_prediction</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Urban fabric prediction from EO data</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">product_type</span><span class="kw">:</span><span class="at"> urban_fabric_map</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">class_labels</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">k7</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'0'</span><span class="kw">:</span><span class="at"> Countryside agriculture</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'1'</span><span class="kw">:</span><span class="at"> Open sprawl</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'2'</span><span class="kw">:</span><span class="at"> Compact suburbia</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'3'</span><span class="kw">:</span><span class="at"> Urban</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'4'</span><span class="kw">:</span><span class="at"> Urban buffer</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'5'</span><span class="kw">:</span><span class="at"> Warehouse/Park land</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'6'</span><span class="kw">:</span><span class="at"> Wild countryside</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">k12</span><span class="kw">:</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'0'</span><span class="kw">:</span><span class="at"> Accessible suburbia</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'1'</span><span class="kw">:</span><span class="at"> Connected residential neighbourhoods</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'2'</span><span class="kw">:</span><span class="at"> Countryside agriculture</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'3'</span><span class="kw">:</span><span class="at"> Dense residential neighbourhoods</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'4'</span><span class="kw">:</span><span class="at"> Dense urban neighbourhoods</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'5'</span><span class="kw">:</span><span class="at"> Disconnected suburbia</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'6'</span><span class="kw">:</span><span class="at"> Gridded residential quarters</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'7'</span><span class="kw">:</span><span class="at"> Open sprawl</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'8'</span><span class="kw">:</span><span class="at"> Urban buffer</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'9'</span><span class="kw">:</span><span class="at"> Urbanity</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'10'</span><span class="kw">:</span><span class="at"> Warehouse/Park land</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">'11'</span><span class="kw">:</span><span class="at"> Wild countryside</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cluster_numbers</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">7</span><span class="kw">,</span><span class="at"> </span><span class="dv">12</span><span class="kw">]</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">time_range</span><span class="kw">:</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">start</span><span class="kw">:</span><span class="at"> </span><span class="dv">2016</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">end</span><span class="kw">:</span><span class="at"> </span><span class="dv">2021</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">measurements</span><span class="kw">:</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> prediction</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">dtype</span><span class="kw">:</span><span class="at"> int32</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">nodata</span><span class="kw">:</span><span class="at"> </span><span class="dv">-1</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">units</span><span class="kw">:</span><span class="at"> </span><span class="st">"1"</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">aliases</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">cluster</span><span class="kw">]</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> probabilities</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">dtype</span><span class="kw">:</span><span class="at"> float32</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">nodata</span><span class="kw">:</span><span class="at"> </span><span class="dv">-9999</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">units</span><span class="kw">:</span><span class="at"> </span><span class="st">"1"</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">aliases</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">class_probs</span><span class="kw">]</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">storage</span><span class="kw">:</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">crs</span><span class="kw">:</span><span class="at"> EPSG:4326</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="example-code" class="level2">
+<h2 class="anchored" data-anchor-id="example-code">Example code</h2>
+<p>The data can be read with <code>xarray</code> and similar tools.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">"ZARR_V3_EXPERIMENTAL_API"</span>] <span class="op">=</span> <span class="st">"1"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"https://s3.cl4.du.cesnet.cz/4f4743b6_4043_4e02_a3ba_0452aa7523a2:uscuni-public/eurofab/eurofab_predictions_datacube.zarr"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> xr.open_zarr(path, zarr_format<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;xarray.Dataset&gt; Size: 4GB
+Dimensions:        (k: 2, obs: 3634816, year: 6, class: 12)
+Coordinates:
+  * k              (k) int64 16B 7 12
+    lon            (obs) float64 29MB dask.array&lt;chunksize=(2000,), meta=np.ndarray&gt;
+  * obs            (obs) int64 29MB 0 1 2 3 ... 3634812 3634813 3634814 3634815
+    lat            (obs) float64 29MB dask.array&lt;chunksize=(2000,), meta=np.ndarray&gt;
+    geometry       (obs) object 29MB dask.array&lt;chunksize=(3634816,), meta=np.ndarray&gt;
+  * year           (year) int64 48B 2016 2017 2018 2019 2020 2021
+Dimensions without coordinates: class
+Data variables:
+    prediction     (obs, year, k) int32 174MB dask.array&lt;chunksize=(2000, 1, 1), meta=np.ndarray&gt;
+    probabilities  (obs, class, year, k) float64 4GB dask.array&lt;chunksize=(2000, 12, 1, 1), meta=np.ndarray&gt;</code></pre>
+<p>The dataset is chunked and can be read only partially, if needed. For details on the contents, see the relevant <a href="https://eurofab-project.github.io/technical-notes/">Technical notes</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

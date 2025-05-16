@@ -1,5 +1,27 @@
 [
   {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data product",
+    "section": "",
+    "text": "The EO workstream generated a data cube of the model outputs across Great Britain. The final data cube including predictions for the years 2016 to 2021 for 7 and 12 classes and is stored as a Zarr file (version 3) available from the link below.\nThe metadata YAML file describing the structure:",
+    "crumbs": [
+      "About",
+      "Data product"
+    ]
+  },
+  {
+    "objectID": "data.html#example-code",
+    "href": "data.html#example-code",
+    "title": "Data product",
+    "section": "Example code",
+    "text": "Example code\nThe data can be read with xarray and similar tools.\nimport os\n\nimport xarray as xr\n\nos.environ[\"ZARR_V3_EXPERIMENTAL_API\"] = \"1\"\n\npath = \"https://s3.cl4.du.cesnet.cz/4f4743b6_4043_4e02_a3ba_0452aa7523a2:uscuni-public/eurofab/eurofab_predictions_datacube.zarr\"\nds = xr.open_zarr(path, zarr_format=3)\nds\n&lt;xarray.Dataset&gt; Size: 4GB\nDimensions:        (k: 2, obs: 3634816, year: 6, class: 12)\nCoordinates:\n  * k              (k) int64 16B 7 12\n    lon            (obs) float64 29MB dask.array&lt;chunksize=(2000,), meta=np.ndarray&gt;\n  * obs            (obs) int64 29MB 0 1 2 3 ... 3634812 3634813 3634814 3634815\n    lat            (obs) float64 29MB dask.array&lt;chunksize=(2000,), meta=np.ndarray&gt;\n    geometry       (obs) object 29MB dask.array&lt;chunksize=(3634816,), meta=np.ndarray&gt;\n  * year           (year) int64 48B 2016 2017 2018 2019 2020 2021\nDimensions without coordinates: class\nData variables:\n    prediction     (obs, year, k) int32 174MB dask.array&lt;chunksize=(2000, 1, 1), meta=np.ndarray&gt;\n    probabilities  (obs, class, year, k) float64 4GB dask.array&lt;chunksize=(2000, 12, 1, 1), meta=np.ndarray&gt;\nThe dataset is chunked and can be read only partially, if needed. For details on the contents, see the relevant Technical notes.",
+    "crumbs": [
+      "About",
+      "Data product"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "EuroFab research project",
